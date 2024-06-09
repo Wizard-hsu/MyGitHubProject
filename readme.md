@@ -1,75 +1,87 @@
-# US Campaign Finance Analytics
+# Introduction and Abstract
 
-## Problem Statement
-For analysis of expenditure for contesting in an election, most of the new candidates cannot analyze the raw data provided by the FEC (Federal Election Commission).
+## Introduction
+The federal government's influence on American political campaigns and elections has steadily increased over the past five decades. Although states primarily administer elections, the federal government plays a significant role in campaign finance regulation. With the US Presidential Election being a critical event impacting both local and global economies, there is a growing need for research on political events' effects on competitive local markets and the global economy. Consequently, various academics and politicians in the US have focused on forecasting election results to inform policy development.
 
-## Solution
-By analyzing the data files of previous years and generating curated data tables which will indeed create reports that describe overall understandings of expenditures.
+## Abstract
+Elections and campaigns are distinct processes governed differently, with the federal government having limited control over political campaigns, except for campaign funding. The main objectives of current election campaigns and policies are voter turnout and electioneering, regulated by federal laws defining permissible and prohibited sources of contributions and expenditures, contribution limits, fundraising prohibitions, permissible uses of campaign funds, and public disclosure of contributions and expenditures.
+
+# Data Source and Methodology
 
 ## Data Source
-Retrieved from:
-[US Campaign Finance Data – Federal Election Commission(FEC)](https://www.fec.gov/data/browse-data/?tab=bulk-data)
+The US Campaign Finance Data provided by the Federal Election Commission (FEC) serves as the primary data source for this project. This dataset encompasses information on candidates, committees, political action committees (PACs), campaigns, transactions, contributions, and expenditures related to US elections.
 
-- **Description**:
-  - The dataset is approximately 15 GB in size and contains information on nearly 28 million individuals.
-  - It includes data on candidates, committees, political action committees (PACs), House and Senate campaigns, as well as transactions, individual and committee contributions, operations, and independent expenditures for US elections.
+## Data Source - Files Used
+- [Data Source - FEC Data Column Names and Abbreviations](https://www.fec.gov/campaign-finance-data/committee-summary-file-description/)
+
+# Software Tools and Technologies
 
 ## Software Tools and Technologies
-- Databricks
-- Spark
-- Tableau
+1. DataBricks
+2. Spark
+3. Tableau
 
- ## Importing Data
+## DataBricks
+DataBricks, supported by AWS, Azure, and Google clouds, is utilized to handle large volumes of raw data. It facilitates data engineering, data science, and data analytics tasks, including production ETL pipelines, streaming analytics, ad-hoc analytics, and machine learning.
 
-### Importing Data Files (.txt) and .csv Files into Databricks
-- The first step in the data processing pipeline is to import data files from various sources into Databricks.
-- Data files include both .txt files and .csv files.
-- We will read all the files and proceed with further processing.
+## Parquet
+Apache Parquet, with advanced encoding and compression techniques, is employed to reduce data storage costs and improve data query efficiency, especially when used with modern cloud technologies like Amazon Athena, Redshift Spectrum, BigQuery, and Azure Data Lakes.
 
-### Reading Data Files
-- For files without headers, we will create a custom schema to ensure proper data structure.
-- CSV files with headers will be read directly using their predefined structure.
+## List Of Files After Loading
+After loading the data, a comprehensive list of files available for analysis is provided.
 
-## Data Cleaning
+# Analysis of Election Campaign Using Visualizations
 
-### Converting File Types and Loading
-- Once the data files are imported, we will convert them into appropriate file types for processing.
-- Data will be loaded into Databricks for further analysis.
+## Transaction Amount for Each Candidate Contesting
+Analysis of transaction amounts made by each candidate in the campaign, showcasing the candidate's name and the sum of their transaction amounts.
 
-### Checking for Nulls and Dropping Them
-- Null values can affect the accuracy of analysis, so we will check for and handle any null values appropriately.
-- Null values will be dropped from the dataset to ensure data integrity.
+## Total Individual Contributions Made by Candidates
+Analysis of individual contributions made to each candidate, displaying the candidate's party affiliation and the sum of their individual contributions.
 
-## List of Files After Loading
-- After the data cleaning process, we will provide a list of all the files that have been successfully loaded into Databricks.
+## Transaction Amount in Each State
+Graphical analysis of transaction amounts in each state, illustrating the count of transaction amounts for each state.
 
-## Data Visualizations
+## Visualization for Transfers from Authorized Committees to the Candidates
+Visualization depicting transfers from authorized committees to candidates, highlighting fund sources.
 
-### Visualization for Total Receipts for Each Candidate
-- Total Receipts represent anything of value received by a political committee. This visualization will provide an overview of the financial support received by each candidate.
+## Visualization of COH_BOP and COH_COP for Each Party
+Graphical representation of COH_BOP (beginning cash on hand balance) and COH_COP (closing cash on hand balance) for each party.
 
-### Transaction Amount in Each State
-- This visualization will display the transaction amount in each state, giving insights into where the campaign spending is concentrated geographically.
+# Model Prediction
 
-### Total Disbursements by Candidates
-- Disbursements cover both expenditure and other types of payments not made to influence federal elections. This visualization will illustrate the total disbursements made by each candidate, providing insights into their spending patterns.
+## Using ML on Analysis
+- Machine learning algorithms are applied to analyze and predict various aspects of the campaign, such as voter behavior, preferences, and turnout.
+- Predictive modeling techniques are employed to forecast campaign expenditures, committee types, and candidate election outcomes.
 
-### Transaction Amount for Each Contesting Candidate
-- This visualization will show the transaction amount for each candidate contesting in the election, allowing for comparisons between candidates.
+## Linear Regression to Predict Contribution
+- Linear regression is utilized to predict the total receipts a committee spends based on receipts collection, aiding in decision-making on loan procurement.
 
-### Total Individual Contributions Made by Candidates
-- Individual contributions play a significant role in campaign finance. This visualization will depict the total individual contributions made to each candidate, highlighting their level of grassroots support.
+## Random Forest to Predict the Committee Type
+- Random forest classification model predicts committee types based on various features, facilitating the identification of committee types.
 
-### Visualization of COH_BOP and COH_COP for Each Party
-- Cash on Hand at the Beginning of Period (COH_BOP) and Cash on Hand at the Close of Period (COH_COP) are crucial indicators of a committee's financial health. This visualization will compare COH_BOP and COH_COP for each party, providing insights into their financial positions.
+## Decision Tree
+- Decision tree analysis is performed to predict candidate election outcomes based on features, providing insights into candidacy viability.
 
-### Visualization for Transfers from Authorized Committees to the Candidates
-- This visualization will depict the transfers from authorized committees to the candidates. It will illustrate the flow of funds between committees, indicating the level of support candidates receive from party organizations and other committees.
+# Tableau Dashboards
 
-### Summary
-The Campaign Finance Analytics project empowers candidates, committees, and stakeholders with actionable insights to navigate the complex landscape of election finance, ultimately contributing to fair and transparent democratic processes.
+- Tableau dashboards are used to visualize campaign finance data, including individual contributions, candidate distribution by state, and expenditure analysis.
+- Dashboards provide interactive visualizations, facilitating data exploration and analysis.
 
-### Visualization of Transaction Amount by State for Campaigning
-- This visualization will show the transaction amount by state for campaigning purposes. It will provide insights into the distribution of campaign expenditures across different states.
+# Project Goal
 
-By visualizing these key aspects of campaign finance data, stakeholders can gain a deeper understanding of financial trends, contributions, and spending patterns in political campaigns. These insights can inform strategic decisions and resource allocation during election campaigns.
+The project aims to increase transparency and accountability in the political system by providing insights into campaign finance. It seeks to empower stakeholders with accurate data, analysis, and reporting to make informed decisions and strengthen the democratic process.
+
+# Conclusion
+
+The project successfully transforms raw FEC data into actionable insights, enabling stakeholders to understand campaign expenditures, contributions, and trends. Machine learning models enhance prediction accuracy, facilitating decision-making processes.
+
+# Future Scope
+
+Future research could focus on leveraging emerging technologies like machine learning and natural language processing to automate data analysis and improve campaign finance reporting accuracy and timeliness.
+
+# References
+- [Federal Election Commission (FEC)](https://www.fec.gov/)
+- [NY Times - Trump-Biden Campaign Donations](https://www.nytimes.com/interactive/2020/10/25/us/politics/trump-biden-campaign-donations.html)
+- [Government Accountability Office (GAO) Report](https://www.gao.gov/assets/gao-20-66r.pdf)
+- [Congressional Research Service (CRS) Report](https://crsreports.congress.gov/product/pdf/R/R45302)
+- [Every CRS Report](https://www.everycrsreport.com/reports/R44318.html)
