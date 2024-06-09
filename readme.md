@@ -30,38 +30,6 @@ Apache Parquet, with advanced encoding and compression techniques, is employed t
 ## List Of Files After Loading
 After loading the data, a comprehensive list of files available for analysis is provided.
 
-# Analysis of Election Campaign Using Visualizations
-
-## Transaction Amount for Each Candidate Contesting
-Analysis of transaction amounts made by each candidate in the campaign, showcasing the candidate's name and the sum of their transaction amounts.
-
-## Total Individual Contributions Made by Candidates
-Analysis of individual contributions made to each candidate, displaying the candidate's party affiliation and the sum of their individual contributions.
-
-## Transaction Amount in Each State
-Graphical analysis of transaction amounts in each state, illustrating the count of transaction amounts for each state.
-
-## Visualization for Transfers from Authorized Committees to the Candidates
-Visualization depicting transfers from authorized committees to candidates, highlighting fund sources.
-
-## Visualization of COH_BOP and COH_COP for Each Party
-Graphical representation of COH_BOP (beginning cash on hand balance) and COH_COP (closing cash on hand balance) for each party.
-
-# Model Prediction
-
-## Using ML on Analysis
-- Machine learning algorithms are applied to analyze and predict various aspects of the campaign, such as voter behavior, preferences, and turnout.
-- Predictive modeling techniques are employed to forecast campaign expenditures, committee types, and candidate election outcomes.
-
-## Linear Regression to Predict Contribution
-- Linear regression is utilized to predict the total receipts a committee spends based on receipts collection, aiding in decision-making on loan procurement.
-
-## Random Forest to Predict the Committee Type
-- Random forest classification model predicts committee types based on various features, facilitating the identification of committee types.
-
-## Decision Tree
-- Decision tree analysis is performed to predict candidate election outcomes based on features, providing insights into candidacy viability.
-
 # Tableau Dashboards
 
 - Tableau dashboards are used to visualize campaign finance data, including individual contributions, candidate distribution by state, and expenditure analysis.
