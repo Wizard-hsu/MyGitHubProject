@@ -66,6 +66,9 @@ Retrieved from:
 ### Visualization for Transfers from Authorized Committees to the Candidates
 - This visualization will depict the transfers from authorized committees to the candidates. It will illustrate the flow of funds between committees, indicating the level of support candidates receive from party organizations and other committees.
 
+### Summary
+The Campaign Finance Analytics project empowers candidates, committees, and stakeholders with actionable insights to navigate the complex landscape of election finance, ultimately contributing to fair and transparent democratic processes.
+
 ### Visualization of Transaction Amount by State for Campaigning
 - This visualization will show the transaction amount by state for campaigning purposes. It will provide insights into the distribution of campaign expenditures across different states.
 
