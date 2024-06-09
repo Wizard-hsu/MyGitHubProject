@@ -1,4 +1,4 @@
-# Introduction and Abstract
+# US Campaign Finance Analytics 
 
 ## Introduction
 The federal government's influence on American political campaigns and elections has steadily increased over the past five decades. Although states primarily administer elections, the federal government plays a significant role in campaign finance regulation. With the US Presidential Election being a critical event impacting both local and global economies, there is a growing need for research on political events' effects on competitive local markets and the global economy. Consequently, various academics and politicians in the US have focused on forecasting election results to inform policy development.
